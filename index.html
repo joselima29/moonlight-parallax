@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page - Parallax</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" alt="" id="stars">
+        <img src="images/moon.png" alt="" id="moon">
+        <img src="images/mountains_behind.png" alt="" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="images/mountains_front.png" alt="" id="mountains_front">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, quo alias magnam, enim facere omnis accusamus eaque quae ipsa quas temporibus quod ipsam beatae eius praesentium doloribus magni illum animi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ea laudantium aliquam et perferendis tempora rerum eveniet veniam ad alias nulla nemo quisquam cum ipsum officia, quibusdam explicabo sit? Beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere ab, libero vero labore sed quia nostrum incidunt error excepturi obcaecati deserunt mollitia? Quibusdam quos odit labore, ad perspiciatis eligendi!<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo nostrum aut id qui. Iusto ad voluptatum eos eius ratione ipsam dolor dolorum voluptatibus quia, consectetur officiis aperiam vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde harum, blanditiis necessitatibus similique libero repudiandae consequatur doloribus laborum tempora et quibusdam. Veritatis libero ad ullam asperiores culpa iste similique voluptatem!<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo nostrum aut id qui. Iusto ad voluptatum eos eius ratione ipsam dolor dolorum voluptatibus quia, consectetur officiis aperiam vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde harum, blanditiis necessitatibus similique libero repudiandae consequatur doloribus laborum tempora et quibusdam. Veritatis libero ad ullam asperiores culpa iste similique voluptatem!<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo nostrum aut id qui. Iusto ad voluptatum eos eius ratione ipsam dolor dolorum voluptatibus quia, consectetur officiis aperiam vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde harum, blanditiis necessitatibus similique libero repudiandae consequatur doloribus laborum tempora et quibusdam. Veritatis libero ad ullam asperiores culpa iste similique voluptatem!</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';            
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 2 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
