@@ -17,7 +17,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 30px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +90,7 @@ section img#mountains_front {
     color: #fff;
     right: -350px;
     white-space: nowrap;
-    font-size: 7.5vw;
+    font-size: 8.5vw;
     z-index: 9;
 }
 #btn {
